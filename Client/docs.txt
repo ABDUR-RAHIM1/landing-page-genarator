@@ -1,0 +1,27 @@
+0 . user login 
+00. get dashboard
+000. add landing page (jwt token)
+000 . url name (business name)
+00 . wav bg 
+000 . sub wav bg
+1 . logo
+2 . main headline
+3 . sub headline
+4 . product name
+5.  product images (main)
+6.  product images (sub)
+7.  about product (quates)
+8 . acordion headline
+9 . acordion qestions / answers
+10 . product related text (attractive)
+11 . product type (kg , pices ect)
+12 . price (regular / offer)
+13 . shipping 
+14. reviwes headline
+13 . reviwes
+
+/*
+   url name hobe usernamer upor (automatic)
+*/
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkxNWZhM2UzNDRlMWZjN2RiZDZmYmYiLCJ1c2VybmFtZSI6ImFiZHVyMTJzIiwiZW1haWwiOiJhYmR1cnJAZ2RtYWlsLmNvbSIsImlhdCI6MTcyMDg0MzQyNX0.-K0YNN1WbmxH94O11WXFnsritcQxpUVwcf0T1ZOc-nY
