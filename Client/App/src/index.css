@@ -44,6 +44,22 @@
   .cartWrapper{
     @apply w-full md:w-[32%]
   }
+
+  /*  dashboard start */
+  .nav{
+    @apply flex items-center justify-center flex-col gap-5
+  }
+  .nav a{
+    @apply capitalize font-medium text-[16px] inline-block w-full py-3 px-2 bg-slate-900 hover:bg-slate-800 duration-200 text-white text-center rounded-md 
+  }
+
+  .section{
+    @apply flex items-center justify-between flex-wrap bg-gray-100 p-3 my-4
+  }
+  .section div{
+    @apply w-[48%] my-2
+  }
+  /*  dashboard end */
 }
 
 

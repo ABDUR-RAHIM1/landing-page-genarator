@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import { BASE_URL } from "../../API/Api";
 import Spinner from '../../components/Spinner';
 import { toast } from 'react-toastify';
+import { useNavigate } from "react-router-dom"
 
 export default function Auth() {
     const [show, setShow] = useState(false);
     const [formData, setFormData] = useState({})
     const [loading, setLoading] = useState(false)
-   
+    const navigate = useNavigate()
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -31,6 +32,7 @@ export default function Auth() {
 
                 if (data.token) {
                     toast.success(data.message)
+                    navigate(`/page/${data.user.username}`)
                 } else {
                     toast.error(data.message)
                 }

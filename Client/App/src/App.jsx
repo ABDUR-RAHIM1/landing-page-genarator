@@ -7,6 +7,10 @@ import AdminProtected from './ProtectedRoute/AdminProtected'
 import Auth from './pages/auth/Auth'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify'
+import Notfound from './pages/Notfound/Notfound'
+import CreatePage from './pages/Dashboard/CreatePage'
+import Orders from './pages/Dashboard/Orders'
+import PageList from './pages/Dashboard/PageList'
 
 export default function App() {
   return (
@@ -23,18 +27,26 @@ export default function App() {
 
         <Route element={<AdminProtected />}>
           <Route
-            path="/:username"
+            path="/page/:username"
             element={<Dashboard />}
           />
           <Route
-            path="/:username/homed"
-            element={<Home />}
+            path="/page/:username/create-page"
+            element={<CreatePage />}
+          />
+          <Route
+            path="/page/:username/page-list"
+            element={<PageList />}
+          /> 
+          <Route
+            path="/page/:username/orders"
+            element={<Orders />}
           />
 
         </Route>
 
         {/* Dashboard end */}
-
+        <Route path='/*' element={<Notfound />} />
       </Routes>
     </>
   )

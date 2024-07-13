@@ -2,9 +2,11 @@
 00. get dashboard
 000. add landing page (jwt token)
 000 . url name (business name)
+
+
 00 . wav bg 
 000 . sub wav bg
-1 . logo
+1 . logo -
 2 . main headline
 3 . sub headline
 4 . product name
