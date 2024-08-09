@@ -1,14 +1,14 @@
 import React from 'react'
 
-import WaveBackground from '../../components/WavBackground'
-import Product from '../../components/Product'
-import Acordion from '../../components/Acordion'
+import WavBackground from '../../Homecomponents/WavBackground'
+import Product from '../../Homecomponents/Product'
+import Acordion from '../../Homecomponents/Acordion'
 import Order from '../Order/Order' 
 
 export default function Home() {
     return (
         <div>
-            <WaveBackground /> 
+            <WavBackground /> 
             <Product />
             <Acordion />
             <Order/>

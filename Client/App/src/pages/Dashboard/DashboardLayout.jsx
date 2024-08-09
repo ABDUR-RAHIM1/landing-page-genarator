@@ -4,8 +4,8 @@ import { MdDashboard } from "react-icons/md";
 export default function DashboardLayout({ children }) {
   const { username } = useParams()
   return (
-    <div className='w-full flex '>
-      <aside className='w-[250px] px-5 py-10 bg-black text-white h-screen overflow-y-scroll'>
+    <div className=' w-full flex dashboardLayout'>
+      <aside className='sidebar w-[250px] px-5 py-10 h-screen overflow-y-scroll'>
 
         <div className=' border-b border-gray-600 pb-4'>
           <h4 className=' text-xl font-medium my-3 flex gap-2 items-center'> <MdDashboard className='text-2xl text-orange-500' />  Dashboard</h4>
@@ -13,17 +13,17 @@ export default function DashboardLayout({ children }) {
         </div>
 
         <nav className=' nav my-10'>
-          <Link to={`/page/${username}`}>Dashboard</Link>
-          <Link to={`/page/${username}/create-page`}>Create Page</Link>
-          <Link to={`/page/${username}/page-list`}> Your Pages</Link>
-          <Link to={`/page/${username}/orders`}>Orders</Link> 
+          <Link to={`/dashboard/${username}`}>Dashboard</Link>
+          <Link to={`/dashboard/${username}/create-page`}>Create Page</Link>
+          <Link to={`/dashboard/${username}/page-list`}> Your Pages</Link>
+          <Link to={`/dashboard/${username}/page-manage`}>Manage Pages</Link>
+          <Link to={`/dashboard/${username}/orders`}>Orders</Link>
         </nav>
         <div style={{ height: "1000px" }}></div>
       </aside>
-      <main className='flex-1 h-screen overflow-y-scroll py-10 px-5'>
+      <main className=' dashboardMain flex-1 h-screen overflow-y-scroll py-10 px-5'>
 
         {children}
-        <div style={{ height: "1000px" }}></div>
       </main>
     </div>
   )

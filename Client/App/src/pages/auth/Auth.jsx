@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { BASE_URL } from "../../API/Api";
-import Spinner from '../../components/Spinner';
+import Spinner from '../../Homecomponents/Spinner';
 import { toast } from 'react-toastify';
 import { useNavigate } from "react-router-dom"
+import Cookies from "js-cookie"
 
 export default function Auth() {
     const [show, setShow] = useState(false);
@@ -27,12 +28,12 @@ export default function Auth() {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 setLoading(false)
-
                 if (data.token) {
                     toast.success(data.message)
-                    navigate(`/page/${data.user.username}`)
+                    Cookies.set("pageToken", data.token, { expires: 7 })
+                    Cookies.set("pageUser", JSON.stringify(data.user), { expires: 7 })
+                    navigate(`/dashboard/${data.user.username}`)
                 } else {
                     toast.error(data.message)
                 }
@@ -40,7 +41,7 @@ export default function Auth() {
             })
 
     }
-    console.log(formData)
+
     return (
         <div className='loginBg flex items-center justify-between flex-wrap px-10'>
             <div className=' w-full md:w-[48%]'>

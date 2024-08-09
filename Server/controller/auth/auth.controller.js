@@ -3,17 +3,27 @@ const userModal = require("../../model/auth/auth.modal")
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
+//  for author /admin
 const getAllUsers = async (req, res) => {
     try {
         const users = await userModal.find().select("-password");
-        res.status(200).json({
-            message: "User",
-            users
-        })
+        res.status(200).json(users)
     } catch (error) {
         errorHelpers(res, error)
     }
 }
+
+
+const getOneUser = async (req, res) => {
+    const { userId } = req.user;
+    try {
+        const users = await userModal.findOne({ _id: userId }).select("-password");
+        res.status(200).json(users)
+    } catch (error) {
+        errorHelpers(res, error)
+    }
+}
+
 
 const registerUser = async (req, res) => {
     try {
@@ -52,6 +62,7 @@ const registerUser = async (req, res) => {
         errorHelpers(res, error)
     }
 }
+
 
 const loginUser = async (req, res) => {
     try {
@@ -95,6 +106,7 @@ const loginUser = async (req, res) => {
     }
 }
 
+
 const deleteUser = async (req, res) => {
     const { id } = req.params;
     try {
@@ -115,4 +127,4 @@ const deleteUser = async (req, res) => {
 
 
 
-module.exports = { getAllUsers, registerUser, loginUser, deleteUser }
+module.exports = { getAllUsers, getOneUser, registerUser, loginUser, deleteUser }

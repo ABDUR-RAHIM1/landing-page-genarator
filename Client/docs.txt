@@ -4,21 +4,27 @@
 000 . url name (business name)
 
 
-00 . wav bg 
-000 . sub wav bg
-1 . logo -
-2 . main headline
-3 . sub headline
-4 . product name
-5.  product images (main)
-6.  product images (sub)
-7.  about product (quates)
+00 . wav bg --
+000 . sub wav bg--
+1 . logo --
+5.  product images (main)--
+6.  product images (sub)--
+
+4 . product name--
+2 . main headline--
+3 . sub headline--
+11 . product type (kg , pices ect)--
+7.  about product (quates) --
+10 . product related text (attractive)
+
+
+12 . price (regular / offer) - - -
+13 . shipping  ----
+
 8 . acordion headline
 9 . acordion qestions / answers
-10 . product related text (attractive)
-11 . product type (kg , pices ect)
-12 . price (regular / offer)
-13 . shipping 
+
+
 14. reviwes headline
 13 . reviwes
 
@@ -27,3 +33,50 @@
 */
 
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkxNWZhM2UzNDRlMWZjN2RiZDZmYmYiLCJ1c2VybmFtZSI6ImFiZHVyMTJzIiwiZW1haWwiOiJhYmR1cnJAZ2RtYWlsLmNvbSIsImlhdCI6MTcyMDg0MzQyNX0.-K0YNN1WbmxH94O11WXFnsritcQxpUVwcf0T1ZOc-nY
+
+ 
+    logo 
+    mainHeadline 
+    subHeadline 
+    productName
+    pdMain
+    pdSub
+    aboutProduct 
+    accordion: {
+        headline: { type: String, required: true },
+        questionsAnswers: { type: [Object], required: true },
+    },
+    productRelatedText 
+    productType 
+    regularPrice 
+    offerPrice 
+    shipping 
+    reviews 
+
+
+   
+   get all page / user : http://localhost:9000/api/v2/user/all 
+   get login's page / user : http://localhost:9000/api/v2/user/one 
+
+   create page - http://localhost:9000/api/v2/page/create
+   get page by ID -  http://localhost:9000/api/v2/page/one/:username/:pageId
+
+
+   background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+
+{
+    email : abdurr@gdmail.com
+    pass : 1111
+}
+
+  {
+     added :  
+     1 : text font size
+     2 : heading font size
+     2 : gradient Type
+     2 : gradient color first
+     2 : gradient color second
+     3 : hero color (primary)
+     4 : text color (secondary)
+     4 : 
+  }

@@ -12,7 +12,7 @@
     @apply py-3 px-5 border-2  font-bold text-center rounded-md hover:border-orange-600 duration-300  
   }
 .input{
-  @apply  w-full py-2 px-3 rounded-md border border-gray-300 focus:outline-yellow-800
+  @apply  w-full h-[60px] py-2 px-3 rounded-md border bg-transparent border-gray-400 focus:outline-yellow-800
 }
 
   .text{
@@ -23,10 +23,10 @@
   };
 
   .acordionWrapper{
-    @apply flex  justify-between flex-wrap flex-col border rounded-md
+    @apply py-4 flex  justify-between flex-wrap flex-col border rounded-md
   }
   .acordion{
-    @apply w-full  md:w-[55%] mt-5 m-auto py-5 px-4 border  rounded-sm
+    @apply w-full  md:w-[85%] mt-5 m-auto py-5 px-4 border  rounded-sm
   }
   .acordionBtn{
     @apply w-full  border p-2 flex items-center justify-between
@@ -50,22 +50,51 @@
     @apply flex items-center justify-center flex-col gap-5
   }
   .nav a{
-    @apply capitalize font-medium text-[16px] inline-block w-full py-3 px-2 bg-slate-900 hover:bg-slate-800 duration-200 text-white text-center rounded-md 
+    @apply capitalize font-medium text-[16px] inline-block w-full py-3 px-2     duration-200 bg-gray-300 text-center rounded-md 
   }
-
-  .section{
-    @apply flex items-center justify-between flex-wrap bg-gray-100 p-3 my-4
+/* .sidebar{
+  @apply bg-gray-200
+} */
+    .formSection{
+    @apply p-2 my-4 border
+  }  
+  
+  .formWrapper{
+    @apply py-5 px-3 my-5 bg-gray-100 rounded-md
   }
-  .section div{
-    @apply w-[48%] my-2
+  .formGroup{
+    @apply flex items-center justify-between flex-wrap my-4
+  }
+   textarea{
+    @apply  h-[100px]
   }
   /*  dashboard end */
+
+  /*  demo page start */
+  .headerArea{
+    @apply w-full h-[85vh] bg-blue-400 flex items-center justify-center flex-col
+  }
+  /*  demo page end */
+
+
 }
 
 
 @layer base {
+  body{
+    font-family: "Poppins", sans-serif;
+  }
+  .dashboardMain{
+    background-image: url("./assets/images/cool-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-attachment: scroll;
+    background-size: cover;
+  }
    .wavBg{
-     background-image: url("../src/assets/images/svg.png");
+    background-image: linear-gradient(to top, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%);
      width: 100%;
      height: 85vh;
      background-repeat: no-repeat;
@@ -81,4 +110,9 @@
     background-size: cover; 
     background-color: #e9b8e914;
    }
+   /* .formSection {
+    background-image: linear-gradient(-225deg, #ffffff 0%, #ffe6fa65 100%);
+} */
+  
 }
+

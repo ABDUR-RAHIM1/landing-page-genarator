@@ -5,7 +5,7 @@ const formFields = [
     { label: "Quantity", name: "quantity", field: "quantity", type: "number", required: true, placeholder: "How Much" },
     { label: "Company Name (optional)", name: "company", field: "companyName", type: "text", required: false, placeholder: "Your Company Name" },
     { label: "Opinion (optional)", name: "opinion", field: "opinion", type: "text", required: false, placeholder: "Your Opinion" },
-    { label: "Town / City",name: "city", field: "townOrCity", type: "text", required: true, placeholder: "Present Town" },
+    { label: "Town / City", name: "city", field: "city", type: "text", required: true, placeholder: "Present Town" },
     { label: "District", name: "district", field: "district", type: "text", required: true, placeholder: "Present District" },
     { label: "Postcode / ZIP (optional)", name: "zip", field: "postcodeOrZip", type: "text", required: false, placeholder: "Your Postal Code" },
     { label: "Email Address", name: "email", field: "emailAddress", type: "email", required: true, placeholder: "Valid Email Address" },

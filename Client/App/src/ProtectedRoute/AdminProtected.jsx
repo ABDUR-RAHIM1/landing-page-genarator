@@ -1,10 +1,11 @@
 import React from 'react'
 import { Navigate, Outlet } from 'react-router-dom';
+import { token } from '../App';
 
 export default function AdminProtected() {
 
-    const login = - true;
+
     return (
-        login ? <Outlet /> : <Navigate to={"/auth"} />
+        token ? <Outlet /> : <Navigate to={"/auth"} />
     )
 }
