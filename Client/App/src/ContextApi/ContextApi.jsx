@@ -9,6 +9,7 @@ import uploadFile from '../Helpers/UploadFIle';
 export const formContext = createContext()
 
 export default function ContextApi({ children }) {
+    
     // 1
     const [loading, setLoading] = useState(false)
     const [imgLoading, setImgLoading] = useState(false)
@@ -19,7 +20,7 @@ export default function ContextApi({ children }) {
     const [subProductImg, setSubProductImg] = useState([])
     const [reviewImgs, setReviewImgs] = useState([])
 
-    const [quote, setQuote] = useState([]) 
+    const [quote, setQuote] = useState([])
     const [acordion, setAcordion] = useState([])
     const [about, setAbout] = useState([]);
     const [orderForm, setOrderForm] = useState(orderFormState)
@@ -45,7 +46,6 @@ export default function ContextApi({ children }) {
         });
     }
 
-    console.log(formData)
 
     const handleUploadFile = async (filePath) => {
         try {
@@ -125,7 +125,7 @@ export default function ContextApi({ children }) {
         switch (info.name) {
             case "quote":
                 setQuote([...quote, info.value])
-            break;
+                break;
 
             case "acordion":
                 setAcordion([...acordion, info.value])
@@ -210,7 +210,7 @@ export default function ContextApi({ children }) {
         try {
             const res = await fetch(`${BASE_URL}/page/one/${username}/${id}`);
             const data = await res.json();
-
+            console.log(data)
             setPage(data)
         } catch (error) {
             console.log(error)

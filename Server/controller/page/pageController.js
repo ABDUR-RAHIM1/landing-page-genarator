@@ -23,6 +23,7 @@ const createPage = async (req, res) => {
             ok: true
         })
     } catch (error) {
+        console.log(error)
         errorHelpers(res, error)
     }
 }
@@ -33,7 +34,7 @@ const getPage = async (req, res) => {
 
     try {
         const user = await userModal.findOne({ username, });
-
+         
         if (!user) {
             return res.status(404).json({
                 message: "User Not Found"
@@ -41,6 +42,7 @@ const getPage = async (req, res) => {
         }
 
         const pageById = user.pages.id(pageId);
+
         if (!pageById) {
             return res.status(404).json({ message: 'Page not found' });
         }

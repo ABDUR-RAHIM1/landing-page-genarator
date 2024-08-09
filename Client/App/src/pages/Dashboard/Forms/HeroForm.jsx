@@ -2,8 +2,7 @@ import React, { useContext } from 'react'
 import FormTitle from '../../../Helpers/FormTitle'
 import InputField from '../../../Helpers/Inputs'
 import FormSubTitle from '../../../Helpers/FormSubTitle'
-import { formContext } from '../../../ContextApi/ContextApi'
-import ImgSpinner from '../../../Helpers/ImgSpinner'
+import { formContext } from '../../../ContextApi/ContextApi' 
 import SelectField from '../../../Helpers/SelectField'
 
 export default function HeroForm() {
@@ -20,11 +19,11 @@ export default function HeroForm() {
     }
 
     const gradientTypes = [
-        "linear-gradient",       // Linear gradient
-        "radial-gradient",       // Radial gradient
-        "conic-gradient",        // Conic gradient
-        "repeating-linear-gradient", // Repeating linear gradient
-        "repeating-radial-gradient", // Repeating radial gradient
+        "linear-gradient",
+        "radial-gradient",
+        "conic-gradient",
+        "repeating-linear-gradient",
+        "repeating-radial-gradient",
     ];
 
     return (

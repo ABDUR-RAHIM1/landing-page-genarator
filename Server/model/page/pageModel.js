@@ -24,14 +24,14 @@ const pageSchema = mongoose.Schema({
     },
 
     information: {
-        productName: { type: String, required: true },
-        productType: { type: String, required: true },
-        regularPrice: { type: Number, required: true },
-        offerPrice: { type: Number, required: true },
-        shippingIn: { type: Number, required: true },
-        shippingOut: { type: Number, required: true },
-        deliverySystem: { type: String, required: true },
-        deliverySystemText: { type: String, required: true },
+        productName: { type: String, },
+        productType: { type: String, },
+        regularPrice: { type: Number, },
+        offerPrice: { type: Number, },
+        shippingIn: { type: Number, },
+        shippingOut: { type: Number, },
+        deliverySystem: { type: String, },
+        deliverySystemText: { type: String, },
         contact: {
             mobile: { type: String, required: true },
             email: { type: String, required: true },
@@ -56,4 +56,4 @@ const pageSchema = mongoose.Schema({
 });
 
 
-module.exports = pageSchema;
+module.exports = pageSchema

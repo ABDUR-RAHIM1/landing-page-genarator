@@ -6,15 +6,17 @@ import Button from './Button'
 export default function Hero(props) {
 
     const { logo, headline, utils } = props.heroData;
-
+    console.log(props)
     const getStyle = (utils) => {
         return {
-            background: `${utils.gradientType}-gradient(${utils.gradientRoated}deg, ${utils.primaryBgColor}, ${utils.secondaryBgColor})`,
+            background: `${utils.gradientType}(${utils.gradientRoated}deg, ${utils.primaryBgColor}, ${utils.secondaryBgColor})`,
             primaryTextColor: utils.primaryTextColor,
         };
     };
 
     const styles = getStyle(utils)
+
+    console.log(styles)
 
     return (
         <div style={{ background: styles.background }} className={` w-full h-[80vh]  flex items-center justify-center flex-col`}>

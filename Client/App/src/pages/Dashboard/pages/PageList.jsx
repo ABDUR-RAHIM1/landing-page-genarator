@@ -21,7 +21,7 @@ export default function PageList() {
                     }
                 });
                 const data = await res.json();
-
+                console.log(data)
                 setPages(data.pages);
                 setIsLoading(false);
             } catch (error) {
@@ -34,8 +34,7 @@ export default function PageList() {
 
         getPage();
     }, []);
-
-    console.log(pages)
+ 
 
     if (isLoading) {
         return <Loader />

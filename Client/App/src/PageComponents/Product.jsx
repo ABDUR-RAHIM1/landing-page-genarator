@@ -8,7 +8,7 @@ export default function Product(props) {
 
     const getStyle = (utils) => {
         return {
-            background: `${utils.gradientType}-gradient(${utils.gradientRoated}deg, ${utils.primaryBgColor}, ${utils.secondaryBgColor})`,
+            background: `${utils.gradientType}(${utils.gradientRoated}deg, ${utils.primaryBgColor}, ${utils.secondaryBgColor})`,
             primaryTextColor: utils.primaryTextColor,
         };
     };
@@ -26,7 +26,7 @@ export default function Product(props) {
                 {
                     quote && quote.map((q, i) => (
                         <div key={i} className=' border-b'>
-                            <h4 style={{ color: styles.primaryTextColor }} className='h1'>{q.text}
+                            <h4 style={{ color: styles.primaryTextColor }} className='h1'>{q.quote}
                                 <span className=' ml-5 text-red-600'> - {q.author}</span>
                             </h4>
 

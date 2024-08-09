@@ -4,8 +4,7 @@ import { BASE_URL } from '../../../API/Api';
 import Loader from '../../../PageComponents/Loader';
 import Product from '../../../PageComponents/Product';
 import Acordion from '../../../PageComponents/Acordion';
-import Order from '../../Order/Order';
-import { formContext } from '../../../ContextApi/ContextApi';
+import Order from '../../Order/Order'; 
 import Hero from '../../../PageComponents/Hero';
 import SubProduct from '../../../PageComponents/SubProduct';
 import Footer from '../../../PageComponents/Footer';
@@ -14,7 +13,7 @@ import Reviews from '../../../PageComponents/Reviews';
 export const pageContext = createContext()
 
 export default function PageDetails() {
-    // const { loading, page, getPageDetails } = useContext(formContext)
+
     const { id, username } = useParams();
     const [loading, setLoading] = useState(false)
     const [pageData, setPageData] = useState({})
@@ -43,11 +42,11 @@ export default function PageDetails() {
         return <Loader />
     }
 
-    console.log(pageData)
 
     return (
 
         <div>
+
             {Object.keys(pageData).length !== 0 ? (
                 <>
                     <Hero heroData={pageData.hero} />
